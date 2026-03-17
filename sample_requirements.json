@@ -1,0 +1,72 @@
+[
+  {
+    "id": "REQ-001",
+    "title": "User Authentication System",
+    "description": "The system shall provide secure user authentication functionality. Users must be able to login using email and password. Password must be at least 8 characters with one uppercase letter, one lowercase letter, one number, and one special character. After 3 consecutive failed login attempts, the account should be temporarily locked for 15 minutes. The system should send an email notification when account is locked.",
+    "priority": "High",
+    "category": "Security"
+  },
+  {
+    "id": "REQ-002",
+    "title": "Product Search and Filter",
+    "description": "Users should be able to search for products using keywords in the search bar. The search should be case-insensitive and support partial matching. Results should display product name, image, price, and availability status. Users must be able to filter results by category, price range, and rating. The system should handle at least 1000 concurrent search requests with response time under 2 seconds.",
+    "priority": "High",
+    "category": "Functional"
+  },
+  {
+    "id": "REQ-003",
+    "title": "Shopping Cart Management",
+    "description": "Users must be able to add items to shopping cart, update quantities, and remove items. The cart should persist across user sessions using browser storage. Maximum 50 unique items can be added to cart. The system should calculate and display subtotal, tax, shipping cost, and total price in real-time. Users should see item count badge on cart icon.",
+    "priority": "Medium",
+    "category": "Functional"
+  },
+  {
+    "id": "REQ-004",
+    "title": "Order Checkout Process",
+    "description": "The checkout process must be completed in maximum 4 steps: Review Cart, Shipping Address, Payment Details, and Order Confirmation. All payment information should be encrypted using SSL/TLS. The system should validate credit card numbers using Luhn algorithm. Users must receive order confirmation email within 5 minutes of placing order. Payment gateway integration should timeout after 30 seconds.",
+    "priority": "High",
+    "category": "Integration"
+  },
+  {
+    "id": "REQ-005",
+    "title": "User Profile Dashboard",
+    "description": "Registered users should have access to a personalized dashboard displaying order history, saved addresses, payment methods, and wishlist. The dashboard should load within 3 seconds. Users can update their profile information including name, email, phone number, and profile picture. Profile picture must be in JPG or PNG format with maximum size of 5MB. The UI should be responsive and work on desktop, tablet, and mobile devices.",
+    "priority": "Medium",
+    "category": "UI/UX"
+  },
+  {
+    "id": "REQ-006",
+    "title": "Product Review System",
+    "description": "Users who have purchased a product should be able to submit reviews with ratings from 1 to 5 stars and optional text comment. Review text must be between 10 and 500 characters. The system should prevent duplicate reviews from the same user for the same product. All reviews must be moderated before appearing on the product page. Average rating should be calculated and displayed prominently on product pages.",
+    "priority": "Low",
+    "category": "Functional"
+  },
+  {
+    "id": "REQ-007",
+    "title": "Inventory Management API",
+    "description": "The system shall provide REST API endpoints for inventory management. Admin users should be able to create, read, update, and delete product information via API. API should support bulk operations for updating stock quantities. All API requests must include authentication token in header. Rate limiting of 100 requests per minute per user should be enforced. API responses should be in JSON format with proper HTTP status codes.",
+    "priority": "High",
+    "category": "Integration"
+  },
+  {
+    "id": "REQ-008",
+    "title": "Email Notification System",
+    "description": "The system must send automated email notifications for the following events: order confirmation, shipping updates, delivery confirmation, password reset, and account verification. Emails should be sent within 5 minutes of the triggering event. Email templates should be customizable and support dynamic content. The system should handle email delivery failures gracefully and retry up to 3 times with exponential backoff.",
+    "priority": "Medium",
+    "category": "Integration"
+  },
+  {
+    "id": "REQ-009",
+    "title": "Admin Analytics Dashboard",
+    "description": "Admin users should have access to analytics dashboard showing key metrics including total sales, revenue trends, top-selling products, customer demographics, and conversion rates. Data should be visualized using charts and graphs. The dashboard should support date range filtering and export data to CSV or PDF format. Real-time updates should be displayed for current day metrics. Dashboard should load completely within 5 seconds.",
+    "priority": "Medium",
+    "category": "Performance"
+  },
+  {
+    "id": "REQ-010",
+    "title": "Multi-Currency Support",
+    "description": "The system shall support multiple currencies including USD, EUR, GBP, and INR. Currency conversion rates should be updated daily from a reliable API. Users should be able to select their preferred currency from account settings. All prices should be displayed in the selected currency. The system should store original transaction currency and amount for reporting purposes.",
+    "priority": "Low",
+    "category": "Functional"
+  }
+]
